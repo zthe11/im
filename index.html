@@ -1,0 +1,283 @@
+<html lang="en"><head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>HACKED</title>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@700&display=swap');
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    html, body {
+      height: 100%;
+      background: black;
+      overflow: hidden;
+      font-family: 'Orbitron', monospace;
+      color: #ff1c1c;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+    }
+
+    canvas {
+      position: fixed;
+      top: 0;
+      left: 0;
+      z-index: -2;
+    }
+
+    .centered {
+      position: relative;
+      text-align: center;
+      z-index: 2;
+      max-width: 600px;
+    }
+
+    .title {
+      font-size: 60px;
+      text-shadow: 0 0 25px #ff0000;
+      margin-bottom: 20px;
+      font-weight: bold;
+    }
+
+    .subtitle {
+      font-size: 20px;
+      color: #f8dada;
+      margin-top: 10px;
+      text-shadow: 0 0 10px #ff1c1c;
+    }
+
+    .itachi {
+      width: 350px;
+      border-radius: 19px;
+      border: 2px solid #ff0000;
+      box-shadow: 0 0 20px #ff0000;
+      transition: transform 0.3s ease-in-out;
+      margin: 20px auto 10px auto;
+      display: block;
+    }
+
+    .itachi:hover {
+      transform: scale(1.05);
+    }
+
+    .info {
+      margin-top: 15px;
+      font-size: 16px;
+      color: #ff5c5c;
+      background: rgba(0, 0, 0, 0.6);
+      padding: 10px 20px;
+      border-radius: 5px;
+      border: 1px solid #ff2e2e;
+      display: inline-block;
+      text-shadow: 0 0 5px #ff1c1c;
+    }
+
+    .buttons {
+      margin-top: 20px;
+    }
+
+    .buttons button {
+      background: transparent;
+      border: 1px solid #ff0000;
+      color: #ff0000;
+      padding: 10px 20px;
+      margin: 5px;
+      font-size: 14px;
+      cursor: pointer;
+      transition: all 0.2s ease-in-out;
+    }
+
+    .buttons button:hover {
+      background: #ff0000;
+      color: black;
+    }
+
+    #timer {
+      font-size: 60px;
+      text-shadow: 0 0 15px #ff0000;
+      user-select: none;
+      margin-top: 30px;
+    }
+
+    iframe {
+      position: absolute;
+      top: -1000px;
+      left: -1000px;
+      width: 0;
+      height: 0;
+      visibility: hidden;
+    }
+
+    #lostMsg, #breachMsg {
+      position: fixed;
+      top: 35%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      font-size: 28px;
+      color: red;
+      background: rgba(0,0,0,0.9);
+      padding: 20px 30px;
+      border: 2px solid red;
+      border-radius: 10px;
+      z-index: 9999;
+      display: none;
+      text-shadow: 0 0 10px red;
+    }
+
+    #dot {
+      position: fixed;
+      top: 20px;
+      right: 20px;
+      width: 12px;
+      height: 12px;
+      background: red;
+      border-radius: 50%;
+      box-shadow: 0 0 10px red;
+      z-index: 10000;
+    }
+
+    .glitch {
+      animation: glitch 0.5s linear infinite;
+    }
+
+    @keyframes glitch {
+      0% { transform: translate(0); }
+      25% { transform: translate(-2px, 2px); }
+      50% { transform: translate(2px, -2px); }
+      75% { transform: translate(-2px, 1px); }
+      100% { transform: translate(0); }
+    }
+
+    @media screen and (max-width: 600px) {
+      .title { font-size: 36px; }
+      .subtitle { font-size: 16px; }
+      .itachi { width: 180px; }
+      #timer { font-size: 40px; }
+    }
+  </style>
+</head>
+<body class="">
+
+<!-- ✅ الصوت بالخلفية -->
+<audio autoplay loop>
+  <source src=https://discord.com/channels/@me/1360350829592187092/1399177510637408328ex=6887ef11&is=68869d91&hm=ca1a30ee97a175b3112fef0cf726022e127e984c1bd514a87dd830c16ef19670& type="audio/mpeg">
+</audio>
+<!-- ✅ رسائل تنبيه -->
+<div id="lostMsg" style="display: none;">🤞😉بعيوني asnaaf 😉🤞</div>
+<div id="breachMsg" style="display: none;">🚨 SYSTEM BREACH DETECTED 🚨</div>
+<div id="dot" style="display: block;"></div>
+
+<div class="centered">
+  <img src="https://tenor.com/view/oshino-ougi-monogatari-monogatari-series-ougi-owarimonogatari-gif-5546435761307021062" alt="Itachi" class="itachi" id="img">
+
+  <div class="title">HACKED BY #NODLE </div>
+  <div class="subtitle">Your server is full of exploits.</div>
+  <div class="subtitle">Wanna know how I did it? Wanna do it too? DM me on Discord </div>
+  <div class="subtitle"> by #NODLE   </div>
+
+  <div class="info" id="geoInfo">🌐 IP:  | 🏳️ Country: Israel | 🏙️ City: </div>
+
+  <div class="buttons">
+    <button> Nothing personal. Just power </button>
+    <button>You were never safe</button>
+    <button>This is not art. This is access.</button>
+    <button> i own your reality</button>
+    <button>GO TO SLEEP BITCHES</button>
+  </div>
+
+  <div id="timer">64</div>
+</div>
+
+<!-- ✅ IP -->
+<script>
+  fetch('https://ipapi.co/json/')
+    .then(res => res.json())
+    .then(data => {
+      const info = `🌐 IP: ${data.ip} | 🏳️ Country: ${data.country_name} | 🏙️ City: ${data.city}`;
+      document.getElementById("geoInfo").textContent = info;
+    })
+    .catch(() => {
+      document.getElementById("geoInfo").textContent = "Failed to fetch IP info.";
+    });
+
+  let elapsed = 0;
+  const timerEl = document.getElementById('timer');
+  function tick() {
+    timerEl.textContent = elapsed;
+    elapsed++;
+  }
+  tick();
+  setInterval(tick, 1000);
+</script>
+
+<!-- ✅ Matrix Rain -->
+<canvas id="bg" height="954" width="1912"></canvas>
+<script>
+  const canvas = document.getElementById("bg");
+  const ctx = canvas.getContext("2d");
+
+  canvas.height = window.innerHeight;
+  canvas.width = window.innerWidth;
+
+  const chars = "010101";
+  const font_size = 16;
+  const columns = canvas.width / font_size;
+  const drops = Array(Math.floor(columns)).fill(1);
+
+  function draw() {
+    ctx.fillStyle = "rgba(0, 0, 0, 0.05)";
+    ctx.fillRect(0, 0, canvas.width, canvas.height);
+    ctx.fillStyle = "#ff0000";
+    ctx.font = font_size + "px monospace";
+
+    for (let i = 0; i < drops.length; i++) {
+      const text = chars[Math.floor(Math.random() * chars.length)];
+      ctx.fillText(text, i * font_size, drops[i] * font_size);
+      if (drops[i] * font_size > canvas.height && Math.random() > 0.975) drops[i] = 0;
+      drops[i]++;
+    }
+  }
+  setInterval(draw, 33);
+</script>
+
+<!-- ✅ اهتزاز وتغير لون الخلفية -->
+<script>
+  setInterval(() => {
+    document.body.classList.toggle("glitch");
+  }, 6000);
+</script>
+
+<!-- ✅ رسالة Lost -->
+<script>
+  setInterval(() => {
+    const msg = document.getElementById("lostMsg");
+    msg.style.display = "block";
+    setTimeout(() => { msg.style.display = "none"; }, 2000);
+  }, 25000);
+</script>
+
+<!-- ✅ رسالة Breach -->
+<script>
+  setInterval(() => {
+    const msg = document.getElementById("breachMsg");
+    msg.style.display = "block";
+    setTimeout(() => { msg.style.display = "none"; }, 2500);
+  }, 18000);
+</script>
+
+<!-- ✅ وميض النقطة -->
+<script>
+  setInterval(() => {
+    const dot = document.getElementById("dot");
+    dot.style.display = dot.style.display === "none" ? "block" : "none";
+  }, 800);
+</script>
+
+
+
+</body></html>
